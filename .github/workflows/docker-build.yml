@@ -35,18 +35,4 @@ jobs:
         context: ./frontend
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/frontend-app:latest
-^\
-    - name: Build and push backend image
-      uses: docker/build-push-action@v5
-      with:
-        context: ./backend
-        push: true
-        tags: sadetomi/backend-app:latest
-
-    - name: Build and push frontend image
-      uses: docker/build-push-action@v5
-      with:
-        context: ./frontend
-        push: true
-        tags: sadetomi/frontend-app:latest
 
